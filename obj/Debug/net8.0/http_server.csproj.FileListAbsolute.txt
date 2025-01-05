@@ -1,0 +1,14 @@
+/home/kyle/Desktop/Projects/c#/http_server/bin/Debug/net8.0/http_server
+/home/kyle/Desktop/Projects/c#/http_server/bin/Debug/net8.0/http_server.deps.json
+/home/kyle/Desktop/Projects/c#/http_server/bin/Debug/net8.0/http_server.runtimeconfig.json
+/home/kyle/Desktop/Projects/c#/http_server/bin/Debug/net8.0/http_server.dll
+/home/kyle/Desktop/Projects/c#/http_server/bin/Debug/net8.0/http_server.pdb
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.GeneratedMSBuildEditorConfig.editorconfig
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.AssemblyInfoInputs.cache
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.AssemblyInfo.cs
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.csproj.CoreCompileInputs.cache
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.dll
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/refint/http_server.dll
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.pdb
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/http_server.genruntimeconfig.cache
+/home/kyle/Desktop/Projects/c#/http_server/obj/Debug/net8.0/ref/http_server.dll

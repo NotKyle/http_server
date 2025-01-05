@@ -1,0 +1,4 @@
+#mcs -out:main.exe main.cs NotKyle/WebServer/server.cs NotKyle/Logger/logger.cs
+
+dotnet clean
+dotnet build

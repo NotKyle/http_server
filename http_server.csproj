@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="main.cs" />
+    <Compile Include="NotKyle/Logger/logger.cs" />
+    <Compile Include="NotKyle/WebServer/server.cs" />
+  </ItemGroup>
+</Project>
+
