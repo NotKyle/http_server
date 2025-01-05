@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System;
 
 namespace NotKyle.WebServer
 {
@@ -18,7 +19,65 @@ namespace NotKyle.WebServer
         {
             List<IPAddress> localhostIPs = GetLocalIPs();
             listener = InitialiseListener(localhostIPs, port);
-            Start(listener);
+            ConfigLoader.ConfigLoader loader = LoadConfig();
+
+            StartHost(loader);
+        }
+
+        private static void StartHost(ConfigLoader.ConfigLoader configLoader)
+        {
+
+            object config = configLoader.ParseConfig(configLoader.GetConfig());
+
+            var configOpts = (Dictionary<string, object>)config;
+
+            // Print the general config
+            foreach (var opt in configOpts)
+            {
+                Console.WriteLine(opt.Key + ": " + opt.Value);
+            }
+
+            ConfigTemplate.ConfigTemplate cfg = new ConfigTemplate.ConfigTemplate();
+            Logger.Logger.Log($"Starting server on {cfg.Host}:{cfg.Port}");
+
+            cfg.Config(
+                (string)configOpts["name"],
+                (int)configOpts["port"],
+                (string)configOpts["host"],
+                (string)configOpts["protocol"],
+                (string)configOpts["version"],
+                (string)configOpts["env"],
+                (int)configOpts["maxConnections"],
+                (int)configOpts["timeout"],
+                (bool)configOpts["keepAlive"]
+            );
+
+            if (cfg.VerifyConfig())
+            {
+                Start(listener);
+            }
+            else
+            {
+                Logger.Logger.Log("Failed to start server, invalid config.");
+
+                foreach (string error in cfg.Errors)
+                {
+                    Logger.Logger.Log(error);
+                }
+            }
+        }
+
+        private static ConfigLoader.ConfigLoader LoadConfig()
+        {
+            ConfigLoader.ConfigLoader configLoader = new ConfigLoader.ConfigLoader();
+            ConfigLoader.ConfigLoader config = configLoader.LoadConfig();
+
+            return configLoader;
+        }
+
+        public static void Stop()
+        {
+            listener.Stop();
         }
 
         private static void Start(HttpListener listener)

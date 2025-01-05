@@ -9,6 +9,8 @@
     <Compile Include="main.cs" />
     <Compile Include="NotKyle/Logger/logger.cs" />
     <Compile Include="NotKyle/WebServer/server.cs" />
+    <Compile Include="NotKyle/ConfigLoader/ConfigLoader.cs" />
+    <Compile Include="NotKyle/ConfigLoader/ConfigTemplate.cs" />
   </ItemGroup>
 </Project>
 

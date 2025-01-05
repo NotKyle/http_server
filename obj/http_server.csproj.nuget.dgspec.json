@@ -10,11 +10,11 @@
         "projectUniqueName": "/home/kyle/Desktop/Projects/c#/http_server/http_server.csproj",
         "projectName": "http_server",
         "projectPath": "/home/kyle/Desktop/Projects/c#/http_server/http_server.csproj",
-        "packagesPath": "/root/.nuget/packages/",
+        "packagesPath": "/home/kyle/.nuget/packages/",
         "outputPath": "/home/kyle/Desktop/Projects/c#/http_server/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/kyle/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

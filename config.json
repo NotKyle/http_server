@@ -1,0 +1,23 @@
+{
+  "servers": [
+    {
+      "name": "NotKyle Frontend",
+      "port": 80,
+      "host": "notkyle.org",
+      "protocol": "http",
+      "version": "1.0.0",
+      "env": "production",
+      "maxConnections": 1000,
+      "timeout": 5000,
+      "keepAlive": true
+    },
+    {
+      "name": "NotKyle Backend",
+      "port": 3000,
+      "host": "localhost",
+      "protocol": "http",
+      "version": "1.0.0",
+      "env": "production"
+    }
+  ]
+}

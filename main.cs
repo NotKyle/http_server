@@ -9,11 +9,30 @@ namespace ConsoleWebServer
     {
         static void Main(string[] args)
         {
-            Server.Start();
-            Logger.Log("Server started on port 80");
-            Console.ReadLine();
+            bool running = false;
 
-            Logger.Log("Server stopped");
+            do
+            {
+                Logger.Log("Server is not running, automatically starting.");
+
+                try
+                {
+                    Server.Start();
+                    running = true;
+                    Logger.Log("Server started successfully, press Ctrl+C to stop.");
+
+                    while (running)
+                    {
+                        Console.ReadKey();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Logger.Log($"Failed to start server: {e.Message}");
+                    Logger.Log("Press any key to try again...");
+                    Console.ReadKey();
+                }
+            } while (!running);
         }
     }
 }
